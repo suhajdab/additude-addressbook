@@ -47,6 +47,10 @@ class AddressbookDetails extends Component {
     }
   }
 
+  stopPropogation(e) {
+    e.stopPropagation();
+  }
+
   componentDidMount(){
     document.addEventListener("keyup", this.onKeyUp.bind(this), false);
   }
@@ -57,7 +61,7 @@ class AddressbookDetails extends Component {
   render() {
     console.log()
     return <div className="addressbook-details" onClick={this.deselectUser}>
-      <div className="mdc-card">
+      <div className="mdc-card" onClick={(e) => this.stopPropogation(e)}>
         <div className="my-card__media mdc-card__media mdc-card__media--16-9" style={{backgroundImage:'url('+this.state.user.picture.large+')'}}></div>
         <div className="">
           <h2 className="mdc-typography--headline6">{FormatName(this.state.user.name)}</h2>
