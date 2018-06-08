@@ -1,28 +1,75 @@
-.App {
+header {
+  z-index: 1;
+}
+
+main {
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-bottom: 16px;
+  overflow: auto;
+}
+
+main .main-content {
+  margin-top: 56px;
+}
+
+@media (min-width: 600px) {
+  main .main-content {
+    margin-top: 64px;
+  }
+}
+
+/* Addressbook List */
+.addressbook-list-item {
+  cursor: pointer;
+}
+
+/* Addressbook Search */
+.addressbook-search-field.mdc-text-field {
+  height: 36px;
+  margin-bottom: 0;
+  background: #fff;
+  border-radius: 3px;
+}
+
+.addressbook-search-field.mdc-text-field .mdc-text-field__input {
+  height: 24px;
+  padding-top: 5px;
+}
+
+.addressbook-search-field.mdc-text-field .mdc-text-field__icon {
+  bottom: 7px;
+}
+
+/* Addressbook Details */
+.addressbook-details {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 56px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0,0,0,0.2);
+}
+
+.addressbook-details .mdc-card {
+  width: 360px;
   text-align: center;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+.addressbook-details a {
+  color: inherit;
+  text-decoration: none;
 }
 
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
+.addressbook-details a:hover {
+  text-decoration: underline;
 }
 
-.App-title {
-  font-size: 1.5em;
-}
-
-.App-intro {
-  font-size: large;
-}
-
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+@media (min-width: 600px) {
+  .addressbook-details {
+    top: 64px;
+  }
 }
